@@ -36,7 +36,7 @@ SITE_CONFIG = {
     'whatsapp':   '966558697397',
     'author':     'شركة صحراء الشرق',
     'og_type':    'website',
-    'hero_image': '/images/default-hero.webp',
+    'hero_image': '/images/articles/cable_maintenance.png',
     'extra_css':  '',
     'extra_js':   '',
 }
@@ -328,7 +328,7 @@ def build_site():
         'page_title':      'شركة صحراء الشرق — كشف أعطال الكابلات وإصلاحها',
         'description':     'شركة صحراء الشرق متخصصة في فحص وكشف أعطال الكابلات الكهربائية وإصلاحها بأحدث الأجهزة في الرياض وجدة. اتصل الآن 0558697397',
         'keywords':        'كشف أعطال كابلات, التماس الكهرباء, فحص كابلات, إصلاح كابلات, كهربائي, الرياض, جدة',
-        'canonical_url':   SITE_CONFIG['site_url'] + '/home/',
+        'canonical_url':   SITE_CONFIG['site_url'] + '/',
         'latest_articles': latest_html,
         'extra_css':       '',
         'extra_js':        '',
@@ -341,10 +341,10 @@ def build_site():
     print('\n🗺️  بناء sitemap.xml و robots.txt...')
     today = datetime.now().strftime('%Y-%m-%d')
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    sitemap += f'  <url><loc>{SITE_CONFIG["site_url"]}/</loc><lastmod>{today}</lastmod><priority>1.0</priority></url>\n'
-    sitemap += f'  <url><loc>{SITE_CONFIG["site_url"]}/home/</loc><lastmod>{today}</lastmod><priority>0.9</priority></url>\n'
+    sitemap += f'  <url><loc>{SITE_CONFIG["site_url"]}/</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>\n'
+    sitemap += f'  <url><loc>{SITE_CONFIG["site_url"]}/home/</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>\n'
     for a in articles:
-        sitemap += f'  <url><loc>{SITE_CONFIG["site_url"]}/blog/{a["slug"]}.html</loc><lastmod>{a["date"] or today}</lastmod><priority>0.7</priority></url>\n'
+        sitemap += f'  <url><loc>{SITE_CONFIG["site_url"]}/blog/{a["slug"]}.html</loc><lastmod>{a["date"] or today}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>\n'
     sitemap += '</urlset>'
     (OUTPUT_DIR / 'sitemap.xml').write_text(sitemap, encoding='utf-8')
     (OUTPUT_DIR / 'robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: {SITE_CONFIG["site_url"]}/sitemap.xml\n', encoding='utf-8')
