@@ -7,7 +7,7 @@ keywords: ["حماية الكابلات", "كابلات أرضية", "التما
 draft: false
 slug: "how-to-protect-underground-cables-from-water"
 category: "أعطال الكابلات"
-image: "/images/articles/electrical_cable_repair.png"
+image: "/images/articles/short_circuit_rain.png"
 ---
 # كيفية حماية الكابلات الكهربائية الأرضية من نفاذ المياه الجوفية والأمطار
 
