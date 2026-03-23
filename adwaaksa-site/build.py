@@ -30,7 +30,7 @@ STATIC_DIR    = PROJECT_DIR / 'static'
 OUTPUT_DIR    = PROJECT_DIR / 'dist'
 
 SITE_CONFIG = {
-    'site_url':   'https://adwaaksa.com',
+    'site_url':   'https://new.adwaaksa.com',
     'site_name':  'صحراء الشرق — كشف أعطال الكابلات',
     'phone':      '0558697397',
     'whatsapp':   '966558697397',
