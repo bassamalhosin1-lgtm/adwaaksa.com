@@ -4,7 +4,7 @@ slug: "cable-short-circuit-detection"
 category: "كابلات"
 date: "2026-03-23"
 description: "متخصصون في كشف التماس الكيابل والكابلات الكهربائية بأجهزة متطورة بالرياض. شركة صحراء الشرق تحدد التماس الكوابل بدقة بدون تكسير 0558697397"
-image: "/images/articles/wire_burning_inside_walls.png"
+image: "/images/articles/cable_short_circuit.png"
 keywords: ["كشف التماس الكيابل", "كشف التماس الكابلات", "جهاز كشف التماس الكيابل الكهربائية", "التماس الكوابل الكهربائية", "التماس الكابلات الكهربائية", "كشف التماس الكهرباء"]
 ---
 

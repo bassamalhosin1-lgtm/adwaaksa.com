@@ -4,7 +4,7 @@ slug: "cable-fault-detection"
 category: "كابلات"
 date: "2026-03-23"
 description: "كشف أعطال الكابلات والكوابل الكهربائية تحت الأرض بأحدث الأجهزة بدون تكسير. شركة صحراء الشرق بالرياض متخصصة في تحديد أعطال الكابلات وإصلاحها 0558697397"
-image: "/images/articles/home_electrical_maintenance_riyadh.png"
+image: "/images/articles/cable_fault_detection.png"
 keywords: ["كشف أعطال الكابلات", "جهاز كشف أعطال الكابلات", "تحديد أعطال الكابلات تحت الأرض", "جهاز كشف أعطال الكوابل الكهربائية"]
 ---
 
