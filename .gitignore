@@ -1,0 +1,62 @@
+# Node
+node_modules/
+
+# Build output
+adwaaksa-site/dist/
+
+# ════════════════════════════════════════
+# SENSITIVE — API keys & automation scripts
+# NEVER commit Python scripts with API keys
+# ════════════════════════════════════════
+ai_generator.py
+gemini_gen.py
+direct_gen.py
+gen_images.py
+regen_all_images.py
+retry_images.py
+content_fixer.py
+deploy_to_cloudflare.py
+automation/generate_*.py
+automation/retry_*.py
+automation/smart_generator.py
+automation/expand_articles.py
+automation/generate_adwaaksa_images.py
+
+# Wrangler
+.wrangler/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+automation/venv/
+automation/logs/
+
+# Backups
+adwaaksa-site/content_backup/
+
+# Temp scripts
+automation/cleanup_articles.py
+automation/copy_images.py
+
+# IDE
+.vscode/
+.idea/
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Sensitive files — NEVER commit
+tokens/
+.env
+*.sql
+db.txt
+
+# Large files
+*.zip
+*.rar
+public_html*/
+test_*.json
+extracted_posts.json

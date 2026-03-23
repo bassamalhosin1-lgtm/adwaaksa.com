@@ -1,0 +1,73 @@
+<!-- Schema.org Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{title}}",
+  "description": "{{description}}",
+  "image": "{{site_url}}{{hero_image}}",
+  "author": {"@type": "Organization", "name": "{{author}}"},
+  "publisher": {
+    "@type": "Organization", 
+    "name": "{{site_name}}", 
+    "logo": {"@type": "ImageObject", "url": "{{site_url}}/images/logo.png"}
+  },
+  "datePublished": "{{date}}",
+  "mainEntityOfPage": "{{canonical_url}}",
+  "keywords": "{{keywords}}"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "صحراء الشرق",
+  "image": "{{site_url}}/images/logo.png",
+  "telephone": "+966558697397",
+  "url": "{{site_url}}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "الرياض",
+    "addressCountry": "SA"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "ratingCount": "1247",
+    "reviewCount": "892"
+  },
+  "priceRange": "$$"
+}
+</script>
+
+<!-- Article Hero -->
+<header class="article-hero">
+    <div class="container">
+        <nav class="article-meta" aria-label="التنقل">
+            <a href="/">الرئيسية</a> › <a href="/blog/">المدونة</a> › <span>{{category}}</span>
+        </nav>
+        <h1>{{title}}</h1>
+        <div class="article-meta">
+            <span>📅 {{date}}</span>
+            <span>✍️ {{author}}</span>
+            <span>📂 {{category}}</span>
+        </div>
+    </div>
+</header>
+
+<!-- Article Hero Image -->
+<div class="article-hero-image" style="text-align: center; margin: 40px 24px 0;">
+    <div class="container">
+        <figure style="margin: 0; padding: 0;">
+            <img src="{{hero_image}}" alt="{{title}}" loading="eager" style="display: block; margin: 0 auto; width: 100%; max-width: 800px; height: auto; border-radius: 16px; box-shadow: 0 12px 40px rgba(0,0,0,0.2);">
+        </figure>
+    </div>
+</div>
+
+<!-- Article Content -->
+<main class="article-layout">
+    <article class="article-content" id="articleContent">
+        {{content}}
+    </article>
+</main>
