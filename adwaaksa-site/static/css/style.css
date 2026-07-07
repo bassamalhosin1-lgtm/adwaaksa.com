@@ -775,6 +775,88 @@ button { font-family: var(--font-head); cursor: pointer; border: none; backgroun
 .scroll-top:hover { transform: translateY(-3px); }
 
 /* ═══════════════════════════════════════
+   LOGO IMAGE + CALL CTA (campaign / landing)
+   ═══════════════════════════════════════ */
+.logo-img {
+  height: 46px; width: auto; display: block;
+  background: #fff; padding: 5px 10px; border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.25);
+}
+.footer-logo-img {
+  height: 54px; width: auto; display: block;
+  background: #fff; padding: 8px 12px; border-radius: 12px;
+}
+
+/* Compact call button shown in navbar on mobile */
+.nav-phone-mini {
+  display: none;
+  width: 42px; height: 42px; border-radius: 50%;
+  align-items: center; justify-content: center;
+  background: var(--gold); color: var(--dark-1);
+  font-size: 1.1rem; box-shadow: var(--shadow-gold);
+  margin-inline-start: 8px;
+}
+
+/* Floating call button (pairs with WhatsApp FAB) */
+.call-fab {
+  position: fixed; bottom: 92px; left: 24px;
+  width: 58px; height: 58px;
+  background: var(--gold); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; color: var(--dark-1);
+  box-shadow: 0 4px 20px rgba(249,174,20,.5);
+  z-index: 999;
+  transition: all .3s var(--ease);
+  animation: float 3s ease-in-out infinite;
+}
+.call-fab:hover { transform: scale(1.1); }
+
+/* Sticky mobile call/whatsapp bar */
+.mobile-cta-bar {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 1000;
+  gap: 10px; padding: 10px 12px;
+  background: rgba(15,17,21,.96);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(249,174,20,.25);
+  box-shadow: 0 -6px 24px rgba(0,0,0,.35);
+}
+.mobile-cta-bar a {
+  flex: 1; text-align: center;
+  padding: 14px 8px; border-radius: 12px;
+  font-family: var(--font-head); font-weight: 800; font-size: 1rem;
+}
+.mcb-call { background: var(--gold); color: var(--dark-1); }
+.mcb-wa   { background: #25D366; color: #fff; }
+
+/* Article hero call CTA */
+.hero-call {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 14px;
+  margin-top: 24px;
+}
+.hero-call-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--gold); color: var(--dark-1);
+  padding: 15px 30px; border-radius: var(--radius-pill);
+  font-family: var(--font-head); font-weight: 800; font-size: 1.05rem;
+  box-shadow: 0 6px 24px rgba(249,174,20,.4);
+  transition: all .3s var(--ease);
+}
+.hero-call-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(249,174,20,.5); }
+.hero-call-wa {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #25D366; color: #fff;
+  padding: 15px 26px; border-radius: var(--radius-pill);
+  font-family: var(--font-head); font-weight: 700; font-size: 1rem;
+  transition: all .3s var(--ease);
+}
+.hero-call-wa:hover { transform: translateY(-2px); }
+.hero-call-note {
+  flex-basis: 100%; color: var(--text-light);
+  font-size: .85rem; opacity: .85;
+}
+
+/* ═══════════════════════════════════════
    ANIMATIONS
    ═══════════════════════════════════════ */
 @keyframes heroFade { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
@@ -796,8 +878,14 @@ button { font-family: var(--font-head); cursor: pointer; border: none; backgroun
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .nav-phone { display: none; }
+  .nav-phone-mini { display: flex; }
   .hamburger { display: flex; }
   .mobile-menu.open { display: flex; }
+  body { padding-bottom: 74px; }
+  .call-fab, .whatsapp-fab { display: none; }
+  .mobile-cta-bar { display: flex; }
+  .scroll-top { bottom: 84px; }
+  .hero-call-btn, .hero-call-wa { flex: 1 1 auto; justify-content: center; }
   .hero-counters { gap: 24px; }
   .srv-grid { grid-template-columns: 1fr; }
   .blog-grid { grid-template-columns: 1fr; }

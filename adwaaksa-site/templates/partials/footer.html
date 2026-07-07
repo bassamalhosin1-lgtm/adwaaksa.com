@@ -3,8 +3,7 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <a href="/" class="footer-logo">
-                    <div class="logo-mark">ص</div>
-                    <span>صحراء الشرق</span>
+                    <img src="/images/logo.webp" alt="صحراء الشرق — كشف أعطال الكابلات" class="footer-logo-img" width="130" height="54">
                 </a>
                 <p>متخصصون في فحص وتشخيص وإصلاح أعطال الكابلات الأرضية بأحدث الأجهزة والتقنيات في الرياض وجدة.</p>
                 <div class="footer-rating">
@@ -49,8 +48,15 @@
     </div>
 </footer>
 
-<!-- WhatsApp FAB -->
+<!-- Floating Action Buttons (desktop / tablet) -->
+<a href="tel:{{phone}}" class="call-fab" aria-label="اتصل الآن">📞</a>
 <a href="https://wa.me/{{whatsapp}}" target="_blank" class="whatsapp-fab" aria-label="واتساب">💬</a>
 
 <!-- Scroll Top -->
 <button class="scroll-top" id="scrollTop" aria-label="العودة للأعلى">↑</button>
+
+<!-- Sticky mobile call bar (landing style) -->
+<div class="mobile-cta-bar">
+    <a href="tel:{{phone}}" class="mcb-call">📞 اتصل الآن</a>
+    <a href="https://wa.me/{{whatsapp}}" target="_blank" class="mcb-wa">💬 واتساب</a>
+</div>
