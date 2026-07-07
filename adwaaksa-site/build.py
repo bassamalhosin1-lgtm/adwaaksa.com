@@ -224,6 +224,11 @@ def build_site():
     print('🔨 Adwaaksa SSG v2 — بدء البناء...\n')
     engine = TemplateEngine(TEMPLATES_DIR)
 
+    # Cache-busting version — forces browsers & Cloudflare to fetch fresh CSS/JS after every deploy
+    SITE_CONFIG['asset_v'] = datetime.now().strftime('%Y%m%d%H%M%S')
+    asset_v = SITE_CONFIG['asset_v']
+    print(f'🔖 Asset version: {asset_v}\n')
+
     # ── Prep output ──
     # if OUTPUT_DIR.exists():
     #     shutil.rmtree(OUTPUT_DIR)
@@ -264,7 +269,7 @@ def build_site():
             'hero_image':  meta.get('image', meta.get('hero_image', SITE_CONFIG['hero_image'])),
             'canonical_url': f"{SITE_CONFIG['site_url']}/blog/{slug}.html",
             'og_type':     'article',
-            'extra_css':   '<link rel="stylesheet" href="/css/article.css">',
+            'extra_css':   f'<link rel="stylesheet" href="/css/article.css?v={asset_v}">',
             'extra_js':    '',
         }
 
@@ -296,7 +301,7 @@ def build_site():
         'canonical_url':   f"{SITE_CONFIG['site_url']}/",
         'articles_list':   cards_html,
         'articles_count':  str(len(articles)),
-        'extra_css':       '<link rel="stylesheet" href="/css/article.css">',
+        'extra_css':       f'<link rel="stylesheet" href="/css/article.css?v={asset_v}">',
         'extra_js':        '',
         'keywords':        'كشف أعطال كابلات, التماس الكهرباء, فحص كابلات, كهربائي',
     }
